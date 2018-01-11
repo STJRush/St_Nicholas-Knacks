@@ -1,7 +1,7 @@
 age_groups = ["0-4", "5-9", "10-12", "13-17", "18-59", "60->"]
 type_of_person = ["Creative", "Car-Lover", "Thoughtful", "Trendy", "Music", "None of These"]
 t_categories = ["Toys", "Clothes", "Lego"]
-k_categories = ["Lego", "Clothes", "Toys", "Sports", "Bikes", "Creativity"]
+k_categories = ["Lego", "Clothes", "Toys", "Sports", "Bikes", "Creativity", "Devices"]
 pt_categories = ["Clothes", "Lego", "Sports", "Bikes", "Creativity"]
 te_categories = ["Clothes", "Sports", "Bikes", "Electronics", "Creativity"]
 a_categories = ["Clothes", "Sports", "Vehicles", "Electronics", "Creativity"]
@@ -24,6 +24,10 @@ tb_lego = ["Mega Bloks Big Building Bag", "Build-n-Learn Table", "Duplo- My Firs
 tg_lego = ["Mega Bloks Big Building Bag", "Build-n-Learn Table", "Duplo- All in One Gift Set", "Duplo- Disney Princess Castle", "Duplo-Minnie Mouse Bow Tique"]
 kb_toys = ["Mini Drone for Kids", "Remote Control BMW", "Ultimate Wind-Up Robot Toy", "Interactive Talking World Map", "Robot Building Kit"]
 kg_toys = ["Hair Chalk", "Zen Colouring Book", "Temporary Flash Tattoos", "Mini Drone for Kids", "Interactive Talking World Map", "No Crease Hair Ribbon Ties"]
+kb_legos = ["Lego Creator: The Mighty Dinosaurs", "Lego Ninjago", "Lego City", "Lego Batman", "Lego Starwars", "Lego Speed"]
+kg_legos = ["Lego Friends", "Lego Juniors", "Lego Disney", "Lego Disney Princess", "Banbao", "Lego Creator", "Lego City"]
+
+kb_creative = ["Lego Creator: The Mighty Dinosaurs", "Lego Ninjago", "Lego City", "Lego Batman", "Lego Starwars", "Lego City"]
 
 def Intro():
 	print("-----------------------------------------------------------------------------------------------------------")
@@ -213,6 +217,14 @@ def ToddlerCategories():
 			print(tg_lego)
 		
 def Kids():
+	print(type_of_person)
+	k_person=input("What kind of person are they? ")
+	print(gender)
+	k_gender=input("Which are they? ")
+	if k_gender == "Male" and k_person == "Creative":
+		print(kb_creative)
+	
+def KidsCategories():
 	print(gender)
 	k_gender=input("Which are they? ")
 	print(k_categories)
