@@ -1,4 +1,5 @@
 age_groups = ["0-4", "5-9", "10-12", "13-17", "18-59", "60->"]
+deals
 type_of_person = ["Creative", "Car-Lover", "Thoughtful", "Trendy", "Music", "None of These"]
 t_categories = ["Toys", "Clothes", "Lego"]
 k_categories = ["Lego", "Clothes", "Toys", "Sports", "Bikes", "Creativity", "Devices"]
