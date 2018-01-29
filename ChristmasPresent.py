@@ -1,5 +1,8 @@
 age_groups = ["0-4", "5-9", "10-12", "13-17", "18-59", "60->"]
-deals
+deals_TTB = ["Play-Doh Crazy Cuts Retro Pack- Once 17.99 now 7.20", "6x600 Paints- Once 16.99 now 6.99", "Take Apart Toy Racing Car-Once 25.99 now 16.95", "PTL Speed Racing Remote Control Car- Once 36.99 now 26.97", "Remote Control Car V2- Once 89.99 changed to 34.99 now 29.74"]
+deals_TTG = ["Play-Doh Crazy Cuts Retro Pack- Once 17.99 now 7.20", "6x600 Paints- Once 16.99 now 6.99" "Take Apart Toy Racing Car-Once 25.99 now 16.95", "PTL Speed Racing Remote Control Car- Once 36.99 now 26.97", "Remote Control Car V2- Once 89.99 changed to 34.99 now 29.74"]
+deal_CTB = ["Knight Costume- Once 21.99 now 8.80", "Little Kids Boys Jumpers Dinosaur Sweaters- Once 18.99 now 3.59"]
+deals_CTG = ["Girls Clothes Set- Once 8.99 now 4.59", "Knee High Socks- Once 1.32 now 0.33"]
 type_of_person = ["Creative", "Car-Lover", "Thoughtful", "Trendy", "Music", "None of These"]
 t_categories = ["Toys", "Clothes", "Lego"]
 k_categories = ["Lego", "Clothes", "Toys", "Sports", "Bikes", "Creativity", "Devices"]
@@ -216,7 +219,25 @@ def ToddlerCategories():
 			print(tb_lego)
 		elif t_gender2 == "Female":
 			print(tg_lego)
-		
+		t_deal=input("Interested in some deals? ")
+	if t_deal == "Yes":
+		ToddlerDeals()
+	elif t_deal == "No":
+		return ToddlerCategories()
+	else:
+		print("Please answer Yes or No.")
+	
+def ToddlerDeals():
+	print(gender)
+	t_gender=input("Which are they? ")
+	if t_gender == "Male":
+		print(deal_CTB)
+		print(deals_TTB)
+	elif t_gender == "Female":
+		print(deals_CTG)
+		print(deals_TTG)
+	else:
+		print("Boi")
 def Kids():
 	print(type_of_person)
 	k_person=input("What kind of person are they? ")
