@@ -1,4 +1,4 @@
-age_groups = ["0-4", "5-9", "10-12", "13-17", "18-59", "60->"]
+age_groups = ["0-4", "5-9", "10-14", "15-17", "18-59", "60->"]
 deals_TTB = ["Play-Doh Crazy Cuts Retro Pack- Once 17.99 now 7.20", "6x600 Paints- Once 16.99 now 6.99", "Take Apart Toy Racing Car-Once 25.99 now 16.95", "PTL Speed Racing Remote Control Car- Once 36.99 now 26.97", "Remote Control Car V2- Once 89.99 changed to 34.99 now 29.74"]
 deals_TTG = ["Play-Doh Crazy Cuts Retro Pack- Once 17.99 now 7.20", "6x600 Paints- Once 16.99 now 6.99" "Take Apart Toy Racing Car-Once 25.99 now 16.95", "PTL Speed Racing Remote Control Car- Once 36.99 now 26.97", "Remote Control Car V2- Once 89.99 changed to 34.99 now 29.74"]
 deal_CTB = ["Knight Costume- Once 21.99 now 8.80", "Little Kids Boys Jumpers Dinosaur Sweaters- Once 18.99 now 3.59"]
@@ -30,8 +30,30 @@ kb_toys = ["Mini Drone for Kids", "Remote Control BMW", "Ultimate Wind-Up Robot 
 kg_toys = ["Hair Chalk", "Zen Colouring Book", "Temporary Flash Tattoos", "Mini Drone for Kids", "Interactive Talking World Map", "No Crease Hair Ribbon Ties"]
 kb_legos = ["Lego Creator: The Mighty Dinosaurs", "Lego Ninjago", "Lego City", "Lego Batman", "Lego Starwars", "Lego Speed"]
 kg_legos = ["Lego Friends", "Lego Juniors", "Lego Disney", "Lego Disney Princess", "Banbao", "Lego Creator", "Lego City"]
-
+kb_clothes = ["XBOX LEGEND CHILDRENS HOODY", "Batman pyjamas", "Dinosaur Coats", "Chinos"]
+kg_clothes = ["Shiny Mermaid Mettalic Fish Scale", "Leggings", "Butterfly Print Princess", "New GIRLS KIDS Boyfriend Lpng Sleeve Plain Jersey Cardigans"]
+kb_sports = ["Sports Digital Watch", "Full Finger Gloves", "Epic Running Shoes", "Sports Boots", "Sports Bag"]
+kg_sports = ["Sports Digital Watch", "Full Finger Gloves", "Epic Running Shoes", "Sports Boots", "Sports Bag"]
+kb_bikes = ["Boys 20 Inch Alloy Mountain Bike", "12 Inch Boys Black Mountain Bike", "Kids Bike Children Bike (With Stabilizers)"]
+kg_bikes = ["Dynacraft Hello Kitty Girls BMX", "Lightweight Kids Bike 20 Inch", "20-Inch Huffy So Sweet Girls Bike"]
+kb_devices = ["Kurio Tab Advance", "Nintendo Switch", "iPhone 5s", "PS4", "Nintendo 3DS", "Wii"]
+kg_devices = ["Kurio Tab Advance", "Nintendo Switch", "iPhone 5s", "PS4", "Nintendo 3DS", "Wii"]
 kb_creative = ["Lego Creator: The Mighty Dinosaurs", "Lego Ninjago", "Lego City", "Lego Batman", "Lego Starwars", "Lego City"]
+kg_creative = ["Lego Creator: The Mighty Dinosaurs", "Lego Dismey", "Lego Banbao", "Lego Batman", "Lego Creator", "Lego City", "Zen Colouring Book"]
+kb_thought = ["Any of our lego products"]
+kg_thought = ["Any of our lego products"]
+kb_trendy = ["Chinos"]
+kg_trendy = ["Shiny Mermaid Mettalic Fish Scale"]
+kb_music = ["Look at Jonathan Young on Youtube. You won't be disappointed"]
+kg_music = ["Look at Jonathan Young on Youtube. You won't be disappointed"]
+ptb_clothes = ["AHR Z&H Kids Girls&Boys Fleece Hoodie", "Designer Boys I Don't Mind At All Joggers Pants", "Boys Keep Calm and Game On Long Pyjamas", "Sonneti Juniour School Boys Navy Black jacket"]
+ptg_clothes = ["AHR Z&H Kids Girls&Boys Fleece Hoodie", "Woman Casual Jumper Shirt Dress", "Loose Button Trim Blouse", "Crazy Girls Womens Just Do It Later Sweatshirt"]
+ptb_lego = ["Lego Architecture London Skyline Building Set", "Lego Buckingham Palace", "Lego Architecture Big Ben", "Lego Technic Porsche 911 GT3 RS"]
+ptg_lego = ["Lego Architecture London Skyline Building Set", "Lego Buckingham Palace", "Lego Architecture Big Ben", "Lego Technic Porsche 911 GT3 RS"]
+ptb_sports = ["Pro Height Adjustable Basket Ball hoop", "Wollowo 24ft x 8 ft Soccer Goal", "Forza 12ft x 6ft GAA goal", "Portable Height Adjustable Badminton Volleyball Tennis Net"]
+ptg_sports = ["Pro Height Adjustable Basket Ball hoop", "Wollowo 24ft x 8 ft Soccer Goal", "Forza 12ft x 6ft GAA goal", "Portable Height Adjustable Badminton Volleyball Tennis Net"]
+ptb_boys = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+ptg_boys = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
 
 def Intro():
 	print("-----------------------------------------------------------------------------------------------------------")
@@ -219,13 +241,13 @@ def ToddlerCategories():
 			print(tb_lego)
 		elif t_gender2 == "Female":
 			print(tg_lego)
-		t_deal=input("Interested in some deals? ")
-	if t_deal == "Yes":
-		ToddlerDeals()
-	elif t_deal == "No":
-		return ToddlerCategories()
-	else:
-		print("Please answer Yes or No.")
+	#t_deal=input("Interested in some deals? ")
+	#if t_deal == "Yes":
+		#ToddlerDeals()
+	#elif t_deal == "No":
+		#return ToddlerCategories()
+	#else:
+		#print("Please answer Yes or No.")
 	
 def ToddlerDeals():
 	print(gender)
@@ -238,6 +260,7 @@ def ToddlerDeals():
 		print(deals_TTG)
 	else:
 		print("Boi")
+		
 def Kids():
 	print(type_of_person)
 	k_person=input("What kind of person are they? ")
@@ -245,6 +268,28 @@ def Kids():
 	k_gender=input("Which are they? ")
 	if k_gender == "Male" and k_person == "Creative":
 		print(kb_creative)
+	elif k_gender == "Female" and k_person == "Creative":
+		print(kg_creative)
+	elif k_gender == "Male" and k_person == "Car-Lover":
+		print(kb_CarLover)
+	elif k_gender == "Female" and k_person == "Car-Lover":
+		print(kg_CarLover)
+	elif k_gender == "Male" and k_person == "Thoughtful":
+		print(kb_thought)
+	elif k_gender == "Female" and k_person == "Thoughtful":
+		print(kg_thought)
+	elif k_gender == "Male" and k_person == "Trendy":
+		print(kb_trendy)
+	elif k_gender == "Female" and k_person == "Trendy":
+		print(kg_trendy)
+	elif k_gender == "Male" and k_person == "Music":
+		print(kb_music)
+	elif k_gender == "Female" and k_person == "Music":
+		print(kg_music)
+	elif k_gender == "Male" and k_person == "None of These":
+		KidsCategories()
+	elif k_gender == "Female" and k_person == "None of These":
+		KidsCategories()
 	
 def KidsCategories():
 	print(gender)
@@ -281,11 +326,71 @@ def KidsCategories():
 			print(kb_creativity)
 		elif k_gender == "Female":
 			print(kg_creativity)
+	elif k_choose == "Devices":
+		if k_gender == "Male":
+			print(kb_devices)
+		elif k_gender == "Female":
+			print(kg_devices)
 	
 def PreTeens():
 	print(pt_categories)
 	pt_choose=input("Choose a category. ")
+	print(type_of_person)
+	pt_person=input("What kind of person are they? ")
+	print(gender)
+	pt_gender=input("Which are they? ")
+	if pt_gender == "Male" and pt_person == "Creative":
+		print(ptb_creative)
+	elif pt_gender == "Female" and pt_person == "Creative":
+		print(ptg_creative)
+	elif pt_gender == "Male" and pt_person == "Car-Lover":
+		print(ptb_CarLover)
+	elif pt_gender == "Female" and pt_person == "Car-Lover":
+		print(ptg_CarLover)
+	elif pt_gender == "Male" and pt_person == "Thoughtful":
+		print(ptb_thought)
+	elif pt_gender == "Female" and pt_person == "Thoughtful":
+		print(ptg_thought)
+	elif pt_gender == "Male" and pt_person == "Trendy":
+		print(ptb_trendy)
+	elif pt_gender == "Female" and pt_person == "Trendy":
+		print(ptg_trendy)
+	elif pt_gender == "Male" and pt_person == "Music":
+		print(ptb_music)
+	elif pt_gender == "Female" and pt_person == "Music":
+		print(ptg_music)
 	
+def PreTeensCategories():
+	print(gender)
+	pt_gender=input("Which are they? ")
+	print(pt_categories)
+	pt_choose=input("Choose a category. ")
+	if pt_choose == "Clothes":
+		if pt_gender == "Male":
+			print(ptb_clothes)
+		elif pt_gender == "Female":
+			print(ptg_clothes)
+	elif pt_choose == "Lego":
+		if pt_gender == "Male":
+			print(ptb_lego)
+		elif pt_gender == "Female":
+			print(ptg_lego)
+	elif pt_choose == "Sports":
+		if pt_gender == "Male":
+			print(ptb_sports)
+		elif pt_gender == "Female":
+			print(ptg_sports)
+	elif pt_choose == "Bikes":
+		if pt_gender == "Male":
+			print(ptb_bikes)
+		elif pt_gender == "Female":
+			print(ptg_bikes)
+	elif pt_choose == "Creativity":
+		if pt_gender == "Male":
+			print(ptb_creativity)
+		elif pt_gender == "Female":
+			print(ptg_creativity)
+			
 def Teens():
 	print(te_categories)
 	te_choose=input("Choose a category. ")
@@ -305,9 +410,9 @@ if choose == "0-4":
 	Toddlers()
 elif choose == "5-9":
 	Kids()
-elif choose == "10-12":
+elif choose == "10-14":
 	PreTeens()
-elif choose == "13-17":
+elif choose == "15-17":
 	Teens()
 elif choose == "18-59":
 	Adults()
