@@ -6,9 +6,9 @@ deals_CTG = ["Girls Clothes Set- Once 8.99 now 4.59", "Knee High Socks- Once 1.3
 type_of_person = ["Creative", "Car-Lover", "Thoughtful", "Trendy", "Music", "None of These"]
 t_categories = ["Toys", "Clothes", "Lego"]
 k_categories = ["Lego", "Clothes", "Toys", "Sports", "Bikes", "Creativity", "Devices"]
-pt_categories = ["Clothes", "Lego", "Sports", "Bikes", "Creativity"]
+pt_categories = ["Clothes", "Lego", "Sports","Electronics", "Bikes", "Creativity"]
 te_categories = ["Clothes", "Sports", "Bikes", "Electronics", "Creativity"]
-a_categories = ["Clothes", "Sports", "Vehicles", "Electronics", "Creativity"]
+a_categories = ["Clothes", "Vehicles", "Electronics", "Creativity"]
 e_categories = ["Clothes", "Electronics"]
 tb_creative = ["Aquadoodle Set", "Mega Bloks Big Building Bag", "Duplo- My Fist Cars and Trucks", "Duplo- Family House", "Duplo- Preschool Set"]
 tg_creative = ["Aquadoodle Set", "Fashion Colour Books", "Mega Bloks Building Bag", "Duplo- All in One Gift Set", "Duplo- Disney Princess Castle", "Duplo- Minnie Mouse Bow Tique", "Disney Princess SnowGlobe Maker"]
@@ -52,8 +52,44 @@ ptb_lego = ["Lego Architecture London Skyline Building Set", "Lego Buckingham Pa
 ptg_lego = ["Lego Architecture London Skyline Building Set", "Lego Buckingham Palace", "Lego Architecture Big Ben", "Lego Technic Porsche 911 GT3 RS"]
 ptb_sports = ["Pro Height Adjustable Basket Ball hoop", "Wollowo 24ft x 8 ft Soccer Goal", "Forza 12ft x 6ft GAA goal", "Portable Height Adjustable Badminton Volleyball Tennis Net"]
 ptg_sports = ["Pro Height Adjustable Basket Ball hoop", "Wollowo 24ft x 8 ft Soccer Goal", "Forza 12ft x 6ft GAA goal", "Portable Height Adjustable Badminton Volleyball Tennis Net"]
-ptb_boys = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
-ptg_boys = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+ptb_bikes = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+ptg_bikes = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+ptb_creativity = ["A4 Sketchpads", "A3 Sketchpads", "144 Class Box of Colouring Pencils", "Oil Pastels-Pack of Fifty"]
+ptg_creativity = ["A4 Sketchpads", "A3 Sketchpads", "144 Class Box of Colouring Pencils", "Oil Pastels-Pack of Fifty"]
+ptb_electronics = ["PS4", "XBox One", "iPhone 6s", "Water Speakers"]
+ptg_electronics = ["PS4", "XBox One", "iPhone 6s", "Water Speakers"]
+ptb_thought = ["Any of our lego products"]
+ptg_thought = ["Any of our lego products"]
+ptb_trendy = ["Boys Sneakers"]
+ptg_trendy = ["Women Pull Over Classic Hooded Sweater"]
+ptb_music = ["Look at Jonathan Young on Youtube. You won't be disappointed"]
+ptg_music = ["Look at Jonathan Young on Youtube. You won't be disappointed"]
+teb_clothes = ["The North Face Resolve Jacket", "Sonneti Command Jacket", "Adidas Originals Nizza Lo"]
+teg_clothes = ["Vans", "McKenzie Girls Lola Jacket", "The North Face Girls Fleece Jacket"]
+teb_sports = ["Boxing Punching Speed Ball", "Mouthguard", "Posture Corrector"]
+teg_sports = ["Sports Bras", "Mouthguard", "Boxing Punching Speed Ball"]
+teb_bikes = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+teg_bikes = ["Mountaineer 26 Inch Wheel Mountain Bike", "20 Inch Unisex BMX Bike", "26 Inch Full Suspension"]
+teb_electronics = ["PS4", "XBox One", "iPhone 8", "iPhone X"]
+teg_electronics = ["PS4", "XBox One", "iPhone 8", "iPhone X"]
+teb_creativity = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+teg_creativity = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+teb_thought = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+teg_thought = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+teb_creative = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+teg_creative = ["Wacom Intuos Pro", "Wacom Bamboo Splash Pen Tablet"]
+ab_clothes = ["Result Heavyweight Waterproof Suit", "British Made Harrington Jacket", "Fleece Jacket"]
+ag_clothes = ["Inspired Bedroom Hoody", "Mountain Warehouse Hoody", "I solemnly swear T-Shirt"]
+ab_vehicles = ["Ford Focus", "BMW X5", "Toyota Corrola"]
+ag_vehicles = ["Ford Focus", "BMW X5", "Toyota Corrola"]
+ab_electronics = ["iPhone X", "iPhone 8", "Nokia"]
+ag_electronics = ["iPhone X", "iPhone 8", "Nokia"]
+ab_creative = ["Wacom Cintiq Companion 2"]
+ag_creative = ["Wacom Cintiq Companion 2"]
+eb_clothes = ["Reading Glasses", "Extra Wide Comfort Fit Diabetic Socks", "Solid Spread Collar"]
+eg_clothes = ["Elastic Waist Skirt", "Magnetic Shirt", "Fooler Blouse"]
+eb_electronics = ["TV", "Coffee Machine", "Microwave"]
+eg_electronics = ["TV", "Coffee Machine", "Microwave"]
 
 def Intro():
 	print("-----------------------------------------------------------------------------------------------------------")
@@ -359,7 +395,11 @@ def PreTeens():
 		print(ptb_music)
 	elif pt_gender == "Female" and pt_person == "Music":
 		print(ptg_music)
-	
+	elif pt_gender == "Male" and pt_person == "None of These":
+		PreTeensCategories()
+	elif pt_gender == "Female" and pt_person == "None of These":
+		PreTeensCategories()
+		
 def PreTeensCategories():
 	print(gender)
 	pt_gender=input("Which are they? ")
@@ -390,18 +430,147 @@ def PreTeensCategories():
 			print(ptb_creativity)
 		elif pt_gender == "Female":
 			print(ptg_creativity)
-			
+	elif pt_choose == "Electronics":
+		if pt_gender == "Male":
+			print(ptb_electronics)
+		elif pt_gender == "Female":
+			print(ptg_electronics)
+	
 def Teens():
 	print(te_categories)
 	te_choose=input("Choose a category. ")
+	print(type_of_person)
+	te_person=input("What kind of person are they? ")
+	print(gender)
+	te_gender=input("Which are they? ")
+	if te_gender == "Male" and te_person == "Creative":
+		print(teb_creative)
+	elif te_gender == "Female" and te_person == "Creative":
+		print(teg_creative)
+	elif te_gender == "Male" and te_person == "Car-Lover":
+		print(teb_CarLover)
+	elif te_gender == "Female" and te_person == "Car-Lover":
+		print(teg_CarLover)
+	elif te_gender == "Male" and te_person == "Thoughtful":
+		print(teb_thought)
+	elif te_gender == "Female" and te_person == "Thoughtful":
+		print(teg_thought)
+	elif teb_gender == "Male" and teb_person == "Trendy":
+		print(teb_trendy)
+	elif te_gender == "Female" and te_person == "Trendy":
+		print(teg_trendy)
+	elif te_gender == "Male" and te_person == "Music":
+		print(teb_music)
+	elif te_gender == "Female" and te_person == "Music":
+		print(teg_music)
+	elif te_gender == "Male" and te_person == "None of These":
+		TeensCategories()()
+	elif k_gender == "Female" and k_person == "None of These":
+		TeensCategories()
 	
+def TeensCategories():
+	print(gender)
+	te_gender=input("Which are they? ")
+	print(te_categories)
+	te_choose=input("Choose a category. ")
+	if te_choose == "Clothes":
+		if te_gender == "Male":
+			print(teb_clothes)
+		elif te_gender == "Female":
+			print(teg_clothes)
+	elif te_choose == "Sports":
+		if te_gender == "Male":
+			print(ten_sports)
+		elif te_gender == "Female":
+			print(teg_sports)
+	elif te_choose == "Bikes":
+		if te_gender == "Male":
+			print(teb_bikes)
+		elif te_gender == "Female":
+			print(teg_bikes)
+	elif te_choose == "Creativity":
+		if te_gender == "Male":
+			print(teb_creativity)
+		elif te_gender == "Female":
+			print(teg_creativity)
+	elif te_choose == "Electronics":
+		if te_gender == "Male":
+			print(teb_creativity)
+		elif te_gender == "Female":
+			print(teg_creativity)
+	print(te_categories)
+
+
 def Adults():
 	print(a_categories)
 	a_choose=input("Choose a category. ")
+	print(type_of_person)
+	a_person=input("What kind of person are they? ")
+	print(gender)
+	a_gender=input("Which are they? ")
+	if a_gender == "Male" and a_person == "Creative":
+		print(ab_creative)
+	elif a_gender == "Female" and a_person == "Creative":
+		print(ag_creative)
+	elif a_gender == "Male" and a_person == "Car-Lover":
+		print(ab_CarLover)
+	elif a_gender == "Female" and a_person == "Car-Lover":
+		print(ag_CarLover)
+	elif a_gender == "Male" and a_person == "Thoughtful":
+		print(ab_thought)
+	elif a_gender == "Female" and a_person == "Thoughtful":
+		print(ag_thought)
+	elif a_gender == "Male" and a_person == "Trendy":
+		print(ab_trendy)
+	elif a_gender == "Female" and a_person == "Trendy":
+		print(ag_trendy)
+	elif a_gender == "Male" and a_person == "Music":
+		print(ab_music)
+	elif a_gender == "Female" and a_person == "Music":
+		print(ag_music)
+	
+def AdultsCategories():
+	print(gender)
+	a_gender=input("Which are they? ")
+	print(a_categories)
+	a_choose=input("Choose a category. ")
+	if a_choose == "Clothes":
+		if a_gender == "Male":
+			print(ab_clothes)
+		elif a_gender == "Female":
+			print(ag_clothes)
+	elif a_choose == "Bikes":
+		if a_gender == "Male":
+			print(ab_bikes)
+		elif a_gender == "Female":
+			print(ag_bikes)
+	elif a_choose == "Creativity":
+		if a_gender == "Male":
+			print(ab_creativity)
+		elif a_gender == "Female":
+			print(ag_creativity)
+	elif a_choose == "Electronics":
+		if a_gender == "Male":
+			print(ab_creativity)
+		elif a_gender == "Female":
+			print(ag_creativity)
+	print(a_categories)
 	
 def Elders():
+	print(gender)
+	e_gender=input("Which are they? ")
 	print(e_categories)
 	e_choose=input("Choose a category. ")
+	if e_choose == "Clothes":
+		if e_gender == "Male":
+			print(eb_clothes)
+		elif e_gender == "Female":
+			print(eg_clothes)
+	elif e_choose == "Electronics":
+		if e_gender == "Male":
+			print(eb_electronics)
+		elif e_gender == "Female":
+			print(eg_electronics)
 
 Intro()
 print("Type the exact number given. E.G '0-4'")
